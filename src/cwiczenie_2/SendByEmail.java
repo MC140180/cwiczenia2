@@ -5,7 +5,8 @@ public class SendByEmail implements ISendAd{
 
     @Override
     public void sendAd(Advertisement advertisement, AdTarget adTarget) {
-        adTarget.getPersonalData();
+        advertisement.setTranslatedContent(advertisement.getContent());
+
         System.out.println(advertisement.getTranslatedContent() + "wyslano email do " + adTarget.getPersonalData().getEmail());
     }
 }
