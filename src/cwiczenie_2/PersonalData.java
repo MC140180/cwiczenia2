@@ -5,6 +5,11 @@ public class PersonalData {
     private final String email;
     private final String phoneNumber;
     private final String voiceChatId;
+    private final String nationality;
+
+    public String getNationality() {
+        return nationality;
+    }
 
     public String getName() {
         return name;
@@ -22,10 +27,12 @@ public class PersonalData {
         return voiceChatId;
     }
 
-    public PersonalData(String name, String email, String phoneNumber, String voiceChatId) {
+    public PersonalData(String name, String email, String phoneNumber, String voiceChatId, String nationality) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.voiceChatId = voiceChatId;
+        this.nationality = nationality;
     }
+
 }
