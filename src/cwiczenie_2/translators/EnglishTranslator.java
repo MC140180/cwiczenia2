@@ -1,4 +1,6 @@
-package cwiczenie_2;
+package cwiczenie_2.translators;
+
+import cwiczenie_2.interfaces.ITranslationInterface;
 
 public class EnglishTranslator implements ITranslationInterface {
     @Override

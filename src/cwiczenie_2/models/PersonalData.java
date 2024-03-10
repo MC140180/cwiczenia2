@@ -1,4 +1,4 @@
-package cwiczenie_2;
+package cwiczenie_2.models;
 
 public class PersonalData {
     private final String name;

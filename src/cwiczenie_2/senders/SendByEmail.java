@@ -1,6 +1,10 @@
-package cwiczenie_2;
+package cwiczenie_2.senders;
 
-public class SendByEmail implements ISendAd{
+import cwiczenie_2.models.AdTarget;
+import cwiczenie_2.models.Advertisement;
+import cwiczenie_2.interfaces.ISendAd;
+
+public class SendByEmail implements ISendAd {
 
 
     @Override

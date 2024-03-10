@@ -1,5 +1,12 @@
 package cwiczenie_2;
 
+import cwiczenie_2.models.AdTarget;
+import cwiczenie_2.models.Advertisement;
+import cwiczenie_2.models.Client;
+import cwiczenie_2.senders.SendByEmail;
+import cwiczenie_2.senders.SendBySMS;
+import cwiczenie_2.senders.SendVoiceMessage;
+
 import java.util.ArrayList;
 
 

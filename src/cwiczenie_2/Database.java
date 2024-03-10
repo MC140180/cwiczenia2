@@ -1,7 +1,11 @@
 package cwiczenie_2;
 
+import cwiczenie_2.models.AdTarget;
+import cwiczenie_2.models.Advertisement;
+import cwiczenie_2.models.PersonalData;
+import cwiczenie_2.translators.EnglishTranslator;
+
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Database {
     static Advertisement GetRandomAd() {

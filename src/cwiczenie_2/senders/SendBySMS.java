@@ -1,4 +1,8 @@
-package cwiczenie_2;
+package cwiczenie_2.senders;
+
+import cwiczenie_2.models.AdTarget;
+import cwiczenie_2.models.Advertisement;
+import cwiczenie_2.interfaces.ISendAd;
 
 public class SendBySMS implements ISendAd {
     @Override

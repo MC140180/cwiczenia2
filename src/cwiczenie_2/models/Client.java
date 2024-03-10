@@ -1,4 +1,6 @@
-package cwiczenie_2;
+package cwiczenie_2.models;
+
+import cwiczenie_2.interfaces.ISendAd;
 
 public class Client {
     private String name;
