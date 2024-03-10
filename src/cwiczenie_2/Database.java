@@ -23,7 +23,6 @@ public class Database {
 
         for (AdTarget target : targets) {
             String nationality = target.getPersonalData().getNationality();
-            System.out.println(nationality == "EN");
             if (!(nationality == "EN"))
                 target.setTranslationInterface(TranslationFinder.GetUserTranslationInterface(nationality));
         }
@@ -39,7 +38,6 @@ public class Database {
 
 
         String nationality = adTarget.getPersonalData().getNationality();
-        System.out.println(nationality == "EN");
         if (!(nationality == "EN"))
             adTarget.setTranslationInterface(TranslationFinder.GetUserTranslationInterface(nationality));
 
