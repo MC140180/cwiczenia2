@@ -1,4 +1,4 @@
-package cwiczenie_1;
+package cwiczenie_1.interfaces;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,10 @@
-package cwiczenie_1;
+package cwiczenie_1.weaponSelectors;
 
-import java.util.Objects;
+import cwiczenie_1.interfaces.IWeapon;
+import cwiczenie_1.interfaces.IWeaponSelection;
+import cwiczenie_1.models.characters.Archer;
 
-public class ArcherWeaponStrategy implements IWeaponSelection {
+public class ArcherWeaponSelection implements IWeaponSelection {
     @Override
     public boolean checkRoleOfWeapon(IWeapon weapon) {
         if(!(weapon.getHero() instanceof Archer)){

@@ -1,4 +1,6 @@
-package cwiczenie_1;
+package cwiczenie_1.models.weapons;
+
+import cwiczenie_1.models.characters.Knight;
 
 public class Sword extends Weapon {
     public Sword() {
