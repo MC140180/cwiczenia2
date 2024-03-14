@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-       Advertisement advertisement = Database.GetRandomAd();
+        Advertisement advertisement = Database.GetRandomAd();
         ArrayList<AdTarget> adTargets = Database.getRandomTargets(); //for better test
         AdTarget adTarget = Database.getRandomTarget();
 
@@ -43,6 +43,5 @@ public class Main {
         client3.setSendAd(new SendByEmail());
         System.out.println(client3.getBalance());
         client3.doSendAd(advertisement, adTarget);
-
     }
 }

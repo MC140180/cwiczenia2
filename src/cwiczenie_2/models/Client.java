@@ -8,11 +8,10 @@ public class Client {
 
     private int balance;
 
-
-
     public Client(String name) {
         this.name = name;
     }
+
     public int getBalance() {
         return balance;
     }
@@ -20,18 +19,20 @@ public class Client {
     private void setBalance(int paymentValue) {
         this.balance = paymentValue;
     }
+
     private void addToBalance(int paymentValue) {
         this.balance += paymentValue;
     }
+
     public ISendAd getSendAd() {
         return sendAd;
     }
 
     public void setSendAd(ISendAd sendAd) {
-       if(!sendAd.checkIfPaymentIsCorrect(this.getBalance())) {
-          System.out.println("pay first");
-           return;
-       }
+        if (!sendAd.checkIfPaymentIsCorrect(this.getBalance())) {
+            System.out.println("pay first");
+            return;
+        }
         this.sendAd = sendAd;
     }
 
@@ -42,6 +43,7 @@ public class Client {
     public void setName(String name) {
         this.name = name;
     }
+
     public void doSendAd(Advertisement advertisement, AdTarget adTarget) {
         if (this.sendAd == null) {
             System.out.println("Select advertising method first");
@@ -50,7 +52,8 @@ public class Client {
         advertisement.setTranslatedContent(adTarget.translateMessage(advertisement.getContent()));
         this.sendAd.sendAd(advertisement, adTarget);
     }
-    public void pay(int payment){
+
+    public void pay(int payment) {
         this.addToBalance(payment);
     }
 }

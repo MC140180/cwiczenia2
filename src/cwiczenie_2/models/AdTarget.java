@@ -11,7 +11,6 @@ public class AdTarget {
         this.personalData = personalData;
     }
 
-
     public PersonalData getPersonalData() {
         return personalData;
     }
