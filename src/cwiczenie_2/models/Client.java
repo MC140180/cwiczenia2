@@ -47,6 +47,7 @@ public class Client {
             System.out.println("Select advertising method first");
             return;
         }
+        advertisement.setTranslatedContent(adTarget.translateMessage(advertisement.getContent()));
         this.sendAd.sendAd(advertisement, adTarget);
     }
     public void pay(int payment){
