@@ -9,6 +9,7 @@ public class SendBySMS implements ISendAd {
     public boolean checkIfPaymentIsCorrect(int payment) {
         return payment >= 50;
     }
+
     @Override
     public void sendAd(Advertisement advertisement, AdTarget adTarget) {
         System.out.println(advertisement.getTranslatedContent() + "wyslano sms do" + adTarget.getPersonalData().getPhoneNumber());
