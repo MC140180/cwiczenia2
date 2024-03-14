@@ -18,8 +18,8 @@ public class Database {
 
         ArrayList<AdTarget> targets = new ArrayList<>();
         AdTarget adTarget = new AdTarget(new EnglishTranslator(), new PersonalData("andrzej", "andrzej@wp.de", "999888222", "423523-daerg2-aa23-2321", "DE"));
-        AdTarget adTarget1 = new AdTarget(new EnglishTranslator(), new PersonalData("andrzej1", "andrzej1@wp.de", "9299888222", "423523-bbbbb-aa23-2321", "ES"));
-        AdTarget adTarget2 = new AdTarget(new EnglishTranslator(), new PersonalData("andrzej2", "andrzej2@wp.de", "9399888222", "423523-aaaaa-aa23-2321", "EN"));
+        AdTarget adTarget1 = new AdTarget(new EnglishTranslator(), new PersonalData("andrzej1", "andrzej1@wp.es", "9299888222", "423523-bbbbb-aa23-2321", "ES"));
+        AdTarget adTarget2 = new AdTarget(new EnglishTranslator(), new PersonalData("andrzej2", "andrzej2@wp.gb", "9399888222", "423523-aaaaa-aa23-2321", "EN"));
 
         targets.add(adTarget);
         targets.add(adTarget1);
