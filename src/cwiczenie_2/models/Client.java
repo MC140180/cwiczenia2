@@ -18,6 +18,9 @@ public class Client {
     }
 
     private void setBalance(int paymentValue) {
+        this.balance = paymentValue;
+    }
+    private void addToBalance(int paymentValue) {
         this.balance += paymentValue;
     }
     public ISendAd getSendAd() {
@@ -47,6 +50,6 @@ public class Client {
         this.sendAd.sendAd(advertisement, adTarget);
     }
     public void pay(int payment){
-        this.setBalance(payment);
+        this.addToBalance(payment);
     }
 }
