@@ -5,4 +5,5 @@ import cwiczenie_2.models.Advertisement;
 
 public interface ISendAd {
     void sendAd(Advertisement advertisement, AdTarget adTarget);
+    boolean checkIfPaymentIsCorrect(int payment);
 }

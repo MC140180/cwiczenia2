@@ -16,12 +16,19 @@ public class Main {
         ArrayList<AdTarget> adTargets = Database.getRandomTargets(); //for better test
         AdTarget adTarget = Database.getRandomTarget();
 
-        Client client1 = new Client("Firma1", new SendByEmail());
-        Client client2 = new Client("Firma2", new SendBySMS());
-        Client client3 = new Client("Firma3", new SendVoiceMessage());
+        Client client1 = new Client("Firma1");
+        Client client2 = new Client("Firma2");
+        Client client3 = new Client("Firma3");
 
+        client1.pay(500);
 
         ArrayList<Client> clients = new ArrayList<Client>();
+        client1.pay(100);
+        client2.pay(200);
+        client3.pay(5);
+        client1.setSendAd(new SendByEmail());
+        client2.setSendAd(new SendBySMS());
+        client3.setSendAd(new SendVoiceMessage());
         clients.add(client1);
         clients.add(client2);
         clients.add(client3);
@@ -31,6 +38,11 @@ public class Main {
             });
         });
 
-        client1.doSendAd(advertisement, adTarget);
+
+        client3.pay(5);
+        client3.setSendAd(new SendByEmail());
+        System.out.println(client3.getBalance());
+        client3.doSendAd(advertisement, adTarget);
+
     }
 }

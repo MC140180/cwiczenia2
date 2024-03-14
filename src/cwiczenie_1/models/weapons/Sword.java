@@ -1,10 +1,11 @@
 package cwiczenie_1.models.weapons;
 
+import cwiczenie_1.enums.VocationEnum;
 import cwiczenie_1.models.characters.Knight;
 
 public class Sword extends Weapon {
     public Sword() {
-        this.hero = new Knight();
+        super(VocationEnum.KNIGHT);
     }
 
     @Override

@@ -1,7 +1,10 @@
 package cwiczenie_1.interfaces;
 
-import java.util.ArrayList;
+import cwiczenie_1.enums.VocationEnum;
 
 public interface IHero {
-    ArrayList<IWeapon> GetAvailableWeapons();
+    VocationEnum getMyRoleAsEnum();
+
+    void selectWeapon(IWeapon weapon);
+    IWeapon getCurrentWeapon();
 }

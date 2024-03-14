@@ -6,16 +6,29 @@ public class Client {
     private String name;
     private ISendAd sendAd;
 
-    public Client(String name, ISendAd sendAd) {
+    private int balance;
+
+
+
+    public Client(String name) {
         this.name = name;
-        this.sendAd = sendAd;
+    }
+    public int getBalance() {
+        return balance;
     }
 
+    private void setBalance(int paymentValue) {
+        this.balance += paymentValue;
+    }
     public ISendAd getSendAd() {
         return sendAd;
     }
 
     public void setSendAd(ISendAd sendAd) {
+       if(!sendAd.checkIfPaymentIsCorrect(this.getBalance())) {
+          System.out.println("pay first");
+           return;
+       }
         this.sendAd = sendAd;
     }
 
@@ -27,7 +40,13 @@ public class Client {
         this.name = name;
     }
     public void doSendAd(Advertisement advertisement, AdTarget adTarget) {
-        advertisement.setTranslatedContent(advertisement.getTranslatedContent());
+        if (this.sendAd == null) {
+            System.out.println("Select advertising method first");
+            return;
+        }
         this.sendAd.sendAd(advertisement, adTarget);
+    }
+    public void pay(int payment){
+        this.setBalance(payment);
     }
 }

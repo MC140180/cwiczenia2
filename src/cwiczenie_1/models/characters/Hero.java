@@ -1,29 +1,39 @@
 package cwiczenie_1.models.characters;
 
+import cwiczenie_1.enums.VocationEnum;
+import cwiczenie_1.interfaces.IHero;
 import cwiczenie_1.interfaces.IWeapon;
-import cwiczenie_1.interfaces.IWeaponSelection;
 
-public abstract class Hero  {
-    protected IWeaponSelection weaponSelectionStrategy;
+public abstract class Hero implements IHero {
     protected IWeapon currentWeapon;
+    protected final VocationEnum myRoleEnum;
+
+
+    Hero(VocationEnum vocationEnum) {
+        this.myRoleEnum = vocationEnum;
+    }
+
+    @Override
+    public void selectWeapon(IWeapon weapon) {
+        if (!(weapon.getAvailableVocationToUse() == this.getMyRoleAsEnum())) {
+            System.out.println("to nie jest bron dla Ciebie");
+            return;
+        }
+        this.setCurrentWeapon(weapon) ;
+        System.out.println("Wybrano broń");
+    }
+
+    @Override
+    public VocationEnum getMyRoleAsEnum() {
+        return this.myRoleEnum;
+    }
+
 
     public IWeapon getCurrentWeapon() {
         return currentWeapon;
     }
 
-    public void setCurrentWeapon(IWeapon currentWeapon) {
+    private void setCurrentWeapon(IWeapon currentWeapon) {
         this.currentWeapon = currentWeapon;
-    }
-
-    Hero(IWeaponSelection weaponSelectionStrategy) {
-        this.weaponSelectionStrategy = weaponSelectionStrategy;
-    }
-
-    public void selectWeapon(IWeapon weapon) {
-        if (!weaponSelectionStrategy.checkRoleOfWeapon(weapon)) {
-            return;
-        }
-        this.currentWeapon = weapon;
-        System.out.println("Wybrano broń");
     }
 }
