@@ -4,7 +4,7 @@ import cwiczenie_2.interfaces.ISendAd;
 
 public class Client {
     private String name;
-    private ISendAd sendAd;
+    private ISendAd sender;
 
     private int balance;
 
@@ -24,8 +24,8 @@ public class Client {
         this.balance += paymentValue;
     }
 
-    public ISendAd getSendAd() {
-        return sendAd;
+    public ISendAd getSender() {
+        return sender;
     }
 
     public void setSendAd(ISendAd sendAd) {
@@ -33,7 +33,7 @@ public class Client {
             System.out.println("pay first");
             return;
         }
-        this.sendAd = sendAd;
+        this.sender = sendAd;
     }
 
     public String getName() {
@@ -44,13 +44,13 @@ public class Client {
         this.name = name;
     }
 
-    public void doSendAd(Advertisement advertisement, AdTarget adTarget) {
-        if (this.sendAd == null) {
+    public void performSendAd(Advertisement advertisement, AdTarget adTarget) {
+        if (this.sender == null) {
             System.out.println("Select advertising method first");
             return;
         }
         advertisement.setTranslatedContent(adTarget.translateMessage(advertisement.getContent()));
-        this.sendAd.sendAd(advertisement, adTarget);
+        this.sender.sendAd(advertisement, adTarget);
     }
 
     public void pay(int payment) {

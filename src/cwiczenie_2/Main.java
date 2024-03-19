@@ -34,7 +34,7 @@ public class Main {
         clients.add(client3);
         clients.forEach(client -> {
             adTargets.forEach(target -> {
-                client.doSendAd(advertisement, target);
+                client.performSendAd(advertisement, target);
             });
         });
 
@@ -42,6 +42,6 @@ public class Main {
         client3.pay(5);
         client3.setSendAd(new SendByEmail());
         System.out.println(client3.getBalance());
-        client3.doSendAd(advertisement, adTarget);
+        client3.performSendAd(advertisement, adTarget);
     }
 }

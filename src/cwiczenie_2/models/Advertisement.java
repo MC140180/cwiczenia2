@@ -9,6 +9,9 @@ public class Advertisement {
     public Advertisement(String content, ISendAd sendAd) {
         this.content = content;
     }
+    public Advertisement(String content) {
+        this.content = content;
+    }
 
     public String getTranslatedContent() {
         return translatedContent;
@@ -18,9 +21,6 @@ public class Advertisement {
         this.translatedContent = translatedContent;
     }
 
-    public Advertisement(String content) {
-        this.content = content;
-    }
 
 
     public String getContent() {
